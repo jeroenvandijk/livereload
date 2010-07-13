@@ -6,4 +6,7 @@ dir = File.expand_path('.')
 exts = "html,css,js,png,gif,jpg,php,py,rb,erb"
 host = "0.0.0.0"
 port = 10083
+
+eval(File.read(".livereload"), binding) if File.exists?(".livereload")
+
 LiveReload.run host, port, dir, exts
